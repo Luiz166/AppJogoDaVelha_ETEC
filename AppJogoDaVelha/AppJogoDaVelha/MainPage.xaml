@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppJogoDaVelha.MainPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#552586" Offset=".5"/>
+            <GradientStop Color="#B589D6" Offset="1.1" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="Title"/>
+            <Setter Property="BorderWidth" Value="1"/>
+            <Setter Property="BorderColor" Value="White"/>
+            <Setter Property="HeightRequest" Value="50" />
+            <Setter Property="WidthRequest" Value="50" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <Grid ColumnDefinitions="*, *, *"
+          RowDefinitions="*, *, *, *, *"
+          Margin="10"
+          VerticalOptions="Center">
+        <Label Grid.Row="0" Grid.Column="0"
+               Grid.ColumnSpan="3"
+               Text="Jogo da velha"
+               FontSize="50"
+               TextColor="White"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"/>
+
+        <Button x:Name="Btn10" Grid.Row="1" Grid.Column="0" Text="" Clicked="ButtonClicked" />
+        <Button x:Name="Btn11" Grid.Row="1" Grid.Column="1" Text="" Clicked="ButtonClicked" />
+        <Button x:Name="Btn12" Grid.Row="1" Grid.Column="2" Text="" Clicked="ButtonClicked" />
+
+        <Button x:Name="Btn20" Grid.Row="2" Grid.Column="0" Text="" Clicked="ButtonClicked" />
+        <Button x:Name="Btn21" Grid.Row="2" Grid.Column="1" Text="" Clicked="ButtonClicked" />
+        <Button x:Name="Btn22" Grid.Row="2" Grid.Column="2" Text="" Clicked="ButtonClicked" />
+
+        <Button x:Name="Btn30" Grid.Row="3" Grid.Column="0" Text="" Clicked="ButtonClicked" />
+        <Button x:Name="Btn31" Grid.Row="3" Grid.Column="1" Text="" Clicked="ButtonClicked" />
+        <Button x:Name="Btn32" Grid.Row="3" Grid.Column="2" Text="" Clicked="ButtonClicked" />
+
+        <Button IsVisible="false" x:Name="BtnReset" Grid.Row="4" Grid.Column="1" Text="Resetar" Clicked="ButtonReset" />
+    </Grid>
+
+</ContentPage>
